@@ -1,7 +1,6 @@
 import sys
 import os
 import streamlit as st
-from st_on_hover_tabs import on_hover_tabs
 import streamlit.components.v1 as components
 
 st.set_page_config(
