@@ -16,8 +16,13 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown('<p class="big-font">Welcome to Follow Me! 👋</p>', unsafe_allow_html=True)
+css_file_path = './style/side.css'
+# Read the CSS file content
+with open(css_file_path) as f:
+    css_content = f.read()
+# Embed the CSS content into the Streamlit app
+st.markdown(f'<style>{css_content}</style>', unsafe_allow_html=True)
 
-st.markdown('<style>' + open('./style/side.css').read() + '</style>', unsafe_allow_html=True)
 def select():
     with st.form('time'):
         time_slider = st.slider('',0,12,1)
